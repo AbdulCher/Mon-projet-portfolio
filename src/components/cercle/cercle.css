@@ -1,0 +1,48 @@
+.outer-circle {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 8px solid white;
+  border-top-color: transparent; /* effet de rotation visible */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: spin 10s linear infinite; /* rotation horaire */
+}
+
+.inner-circle {
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  border: 5px solid white;
+  border-top-color: transparent;
+  animation: spin-reverse 8s linear infinite; /* rotation antihoraire */
+}
+.outer-circle2 {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  border: 3px solid darkgreen;
+  border-top-color: transparent; /* effet de rotation visible */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: spin 10s linear infinite; /* rotation horaire */
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg); /* sens inverse */
+  }
+}
