@@ -1,31 +1,27 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer";
-
-import Home from "./pages/home/Home";
-import Presentation from "./pages/presentation/Presentation";
-import Realisations from "./pages/realisation/Realisation";
-import Activites from "./pages/activites/Activites";
-import Competences from "./pages/competences/Competences";
-import Contact from "./pages/contact/Contact";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Skills from "./pages/Skills";
+import Contact from "./pages/Contact";
+import "./styles/global.css";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
+    <Router>
+      <Navbar />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/presentation" element={<Presentation />} />
-          <Route path="/realisations" element={<Realisations />} />
-          <Route path="/activites" element={<Activites />} />
-          <Route path="/competences" element={<Competences />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/skills" element={<Skills />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
       <Footer />
-    </BrowserRouter>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;
