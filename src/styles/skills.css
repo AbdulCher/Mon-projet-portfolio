@@ -1,0 +1,162 @@
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #06294e;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.skills-title {
+  font-size: 2.2rem;
+  margin-bottom: 60px;
+  color: #00e0ff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Conteneur global avec aiguille */
+.skills-circle-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Aiguille */
+.needle {
+  position: absolute;
+  top: -40px;
+  width: 2px;
+  height: 40px;
+  background: #00e0ff;
+  box-shadow: 0 0 10px #00e0ff;
+  z-index: 3;
+}
+
+/* Cercle principal */
+.skills-circle {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rotate 20s linear infinite;
+  transition: animation-play-state 0.5s ease;
+}
+
+/* Arrêt au survol */
+.skills-circle:hover {
+  animation-play-state: paused;
+}
+
+/* Logos sur le cercle */
+.skill-item {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  transform: rotate(calc(var(--i) * 40deg)) translate(150px) rotate(calc(var(--i) * -40deg));
+}
+
+.skill-item img {
+  width: 100%;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.skill-item img:hover {
+  transform: scale(1.2);
+  /*filter: brightness(1.5);*/
+}
+
+/* Bille lumineuse + traînée */
+.orbit-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  animation: orbit 5s linear infinite;
+}
+
+.orbit-ball {
+  width: 14px;
+  height: 14px;
+  background: #00e0ff;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #00e0ff, 0 0 40px #00e0ff;
+  position: absolute;
+  left: -150px;
+}
+
+.orbit-trail {
+  position: absolute;
+  left: -150px;
+  width: 70px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(0, 224, 255, 0.8), transparent);
+  transform: rotate(180deg);
+  border-radius: 50%;
+}
+
+/* Texte au centre */
+.skill-name {
+  position: absolute;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #00e0ff;
+  opacity: 0;
+  animation: fadeText 2s linear infinite;
+}
+
+/* Animation du texte central */
+@keyframes fadeText {
+  0%, 100% { opacity: 0; transform: scale(0.8); }
+  10%, 70% { opacity: 1; transform: scale(1); }
+}
+
+/* Animations principales */
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes orbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .skills-circle {
+    width: 250px;
+    height: 250px;
+  }
+
+  .skill-item {
+    transform: rotate(calc(var(--i) * 40deg)) translate(100px) rotate(calc(var(--i) * -40deg));
+  }
+
+  .skill-item img {
+    width: 45px;
+  }
+
+  .orbit-ball {
+    left: -100px;
+  }
+
+  .orbit-trail {
+    left: -100px;
+    width: 50px;
+  }
+
+  .needle {
+    height: 30px;
+    top: -30px;
+  }
+}

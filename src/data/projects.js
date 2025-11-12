@@ -5,7 +5,7 @@ const projects = [
     description:
       "Création d’un site de planification de vacances dynamique à partir d’une maquette Figma. Intégration responsive complète en HTML et CSS.",
     stack: ["HTML", "CSS", "Figma"],
-    image: "/assets/booki.jpg",
+    image: "/assets/booki.png",
     context:
       "Projet d’apprentissage centré sur la structuration du code HTML et la mise en page responsive.",
     objectives:
@@ -19,7 +19,7 @@ const projects = [
     description:
       "Développement d’un portfolio d’architecte avec gestion dynamique des galeries et modales via JavaScript.",
     stack: ["HTML", "CSS", "JavaScript"],
-    image: "/assets/sophiebluel.jpg",
+    image: "/assets/sophiebluel.png",
     context:
       "Projet de manipulation du DOM et de gestion d’interfaces dynamiques.",
     objectives:
@@ -33,7 +33,7 @@ const projects = [
     description:
       "Refonte complète d’un site de location immobilière en React. Création de composants, routage et gestion de données JSON.",
     stack: ["React", "Vite", "CSS Modules"],
-    image: "/assets/kasa.jpg",
+    image: "/assets/Kasa.png",
     context:
       "Projet d’apprentissage React : architecture en composants, props et routing.",
     objectives:
