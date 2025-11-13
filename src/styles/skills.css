@@ -31,11 +31,12 @@
 .needle {
   position: absolute;
   top: -40px;
-  width: 2px;
+  width: 4px;
   height: 40px;
   background: #00e0ff;
   box-shadow: 0 0 10px #00e0ff;
   z-index: 3;
+  
 }
 
 /* Cercle principal */

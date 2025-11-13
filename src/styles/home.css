@@ -35,7 +35,10 @@
 .highlight {
   color: #007bff;
 }
-
+.hero-image-text {
+  display: flex;
+  flex-direction: row;
+}
 .hero-text p {
   color: black;
   line-height: 1.6;
@@ -79,4 +82,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .hero-image-text {
+  display: flex;
+  flex-direction: column;
+}
 }
