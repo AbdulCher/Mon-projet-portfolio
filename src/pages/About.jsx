@@ -21,15 +21,21 @@ export default function About() {
         <h3>Quelques projets récents</h3>
         <div className="project-previews">
           <div className="preview">
-            <img src="/assets/booki.png" alt="Projet Booki" />
+            <div className="img-wrap">
+              <img src="/assets/booki.png" alt="Projet Booki" />
+            </div>
             <p>Booki — Intégration HTML/CSS responsive</p>
           </div>
           <div className="preview">
+            <div className="img-wrap">
             <img src="/assets/sophiebluel.png" alt="Projet Sophie Bluel" />
+            </div>
             <p>Portfolio Sophie Bluel — JavaScript dynamique</p>
           </div>
           <div className="preview">
+            <div className="img-wrap">
             <img src="/assets/Kasa.png" alt="Projet Kasa" />
+            </div>
             <p>Kasa — Application React complète</p>
           </div>
         </div>

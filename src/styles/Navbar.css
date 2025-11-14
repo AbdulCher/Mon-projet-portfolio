@@ -93,7 +93,7 @@ header h2 {
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: #fff;
   font-weight: 500;
   transition: color 0.3s ease;
 }
@@ -161,5 +161,8 @@ header h2 {
   .nav-links.open {
     display: flex; /* ✅ affiché uniquement quand le menu est ouvert */
     transform: translateX(0);
+  }
+  .nav-links a {
+    color: #333;
   }
 }
