@@ -154,10 +154,12 @@ header h2 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
+    display: none; /* ✅ totalement caché par défaut */
   }
 
   /* Quand on clique sur le burger, la classe .open s’applique */
   .nav-links.open {
+    display: flex; /* ✅ affiché uniquement quand le menu est ouvert */
     transform: translateX(0);
   }
 }

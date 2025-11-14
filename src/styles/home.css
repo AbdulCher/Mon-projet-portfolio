@@ -38,12 +38,38 @@
 .hero-image-text {
   display: flex;
   flex-direction: row;
+  align-items: center;      /* ✅ aligne l’image et le h1 sur la même ligne */
+  justify-content: space-between;
+  gap: 40px;                /* espace entre texte et image */
 }
+.hero-text {
+  flex: 1;
+}
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;  /* centre l’image */
+}
+.hero-image img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 50%;
+}
+
+
 .hero-text p {
   color: black;
   line-height: 1.6;
   font-size: 1.4rem;
   margin-bottom: 25px;
+}
+.btns {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%; /* ✅ essentiel */
+   /* (facultatif, si tu veux limiter la largeur) */
+  margin: 0 auto; /* (facultatif, si tu veux centrer le bloc sur la page) */
 }
 
 .btn-primary {
@@ -58,25 +84,7 @@
 
 
 
-/* Conteneur de l’image */
-.hero-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 30px;
-}
 
-/* Image elle-même */
-.hero-image img {
-  width: 100%;
-  max-width: 300px; /* ✅ limite la taille sans la figer */
-  height: auto;
-  border-radius: 50%;
-  object-fit: cover; /* ✅ garde de belles proportions */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  animation: fadeIn 1.2s ease forwards;
-}
 
 .mesLiens {
     display: flex;
@@ -88,7 +96,42 @@
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
   .hero-image-text {
-  display: flex;
-  flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    width: 100%;
+    text-align: start;
+  }
+
+  .hero-image {
+    width: 100%;
+    margin-top: 20px;
+    justify-content: center; /* mobile : image centrée */
+  }
 }
+
+/* Desktop / Large screens : image alignée à droite pour s'aligner avec le H1 */
+@media (min-width: 769px) {
+  .hero-image-text {
+    flex-direction: row;
+    align-items: flex-start;     /* aligne verticalement h1 et image */
+  }
+
+  .hero-text {
+    flex: 1;
+  }
+
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* desktop : image collée à droite */
+  }
+
+  /* Petit ajustement pour que le H1 soit aligné proprement */
+  .hero-text h1 {
+    margin-top: 0;
+  }
 }
+

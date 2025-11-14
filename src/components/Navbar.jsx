@@ -11,12 +11,12 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <h1 className="logo-animated">
-  <span>/</span>
-  <span>/</span>
-  <span>/</span>
-  <span>/</span>
-  <span>/</span>
-</h1>
+        <span>/</span>
+        <span>/</span>
+        <span>/</span>
+        <span>/</span>
+        <span>/</span>
+      </h1>
 
       {/* Burger icon */}
       <div className={`burger ${isOpen ? "open" : ""}`} onClick={toggleMenu}>

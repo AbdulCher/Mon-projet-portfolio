@@ -8,8 +8,8 @@ export default function Home() {
       <div className="hero">
         <div className="hero-image-text">
           <div className="hero-text">
-            <h1 className="myName">N DIAYE<br></br> CHEIKH<br></br>ABDUL</h1>
-            <h2>Développeur Web Front-End</h2>
+            <h1 className="myName">NNNNNN<br></br>NNNNNNN<br></br>NNNNNNNPM</h1>
+            <h2>Intégrateur web</h2>
             <p>
               Passionné par la création d’expériences web modernes et intuitives,
               je conçois des interfaces claires, performantes et accessibles.
@@ -19,14 +19,20 @@ export default function Home() {
             <img src="/assets/profile.jpg" alt="Portrait de développeur" />
           </div>
         </div>
-        <div className="mesLiens">
+        <div className="btns">
           <Link to="/projects" className="btn-primary">
             Voir mes projets
-          </Link>
-          <Link to="/projects" className="btn-primary">
-            GitHub profile
-          </Link>
-        </div>
+        </Link>
+        <a
+          href="https://github.com/ton-profil"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-primary"
+        >
+          GitHub profile
+        </a>
+      </div>
+
       </div>
         
     </section>
